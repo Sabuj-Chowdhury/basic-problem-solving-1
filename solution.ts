@@ -1,4 +1,4 @@
-function formatString(input: string, toUpper?: boolean) {
+function formatString(input: string, toUpper?: boolean): string {
   if (toUpper === true || toUpper === undefined) {
     return input.toUpperCase();
   } else {
@@ -35,5 +35,13 @@ class Car extends Vehicle {
   }
   getModel() {
     console.log(`Model: ${this.model}`);
+  }
+}
+
+function processValue(value: string | number): number {
+  if (typeof value === "string") {
+    return value.length;
+  } else {
+    return value * 2;
   }
 }
